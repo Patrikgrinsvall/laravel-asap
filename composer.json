@@ -1,0 +1,53 @@
+{
+    "name": "silentridge/laravel-asap",
+    "description": "A command line tool for generating installations with custom setup processes for laravel/symphonyapplications",
+    "keywords": [
+        "silentridge",
+        "laravel-asap"
+    ],
+    "homepage": "https://github.com/silentridge/laravel-asap",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Patrik Grinsvall",
+            "email": "patrik@silentridge.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SilentRidge\\Asap\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SilentRidge\\Asap\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SilentRidge\\Asap\\AsapServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    }
+}
